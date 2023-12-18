@@ -1,0 +1,67 @@
+:root {
+  --bg-color: #1C1C1E;
+  --blue: rgb(10, 132, 255);
+  --grey: #2C2C2E;
+}
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.chat-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  clear: both;
+  word-wrap: break-word;
+}
+
+.message.sent {
+  float: right;
+  background-color: var(--blue);
+}
+
+.message.received {
+  float: left;
+  background-color: var(--grey);
+}
+
+.message-input {
+  margin-top: 20px;
+}
+
+.message-input input {
+  padding: 8px;
+  border: 3px solid var(--grey);
+  color: var(--grey);
+  background: transparent;
+  border-radius: 20px;
+  outline: none;
+}
+
+.message-input button {
+  padding: 8px 15px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
